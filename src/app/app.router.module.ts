@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./ui/list/list.module').then(m => m.ListModule) },
+  { path: ':pokemonId', loadChildren: () => import('./ui/detail/detail.module').then(m => m.DetailModule) },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
