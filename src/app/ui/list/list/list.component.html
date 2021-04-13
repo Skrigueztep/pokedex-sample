@@ -1,1 +1,17 @@
-<p>list works!</p>
+<mat-toolbar>
+  <span class="title">Pokedex</span>
+  <div class="search">
+    <input title="Search a pokemon" placeholder="Search a pokemon" (input)="onSearchPokemon($event)">
+    <mat-icon>search</mat-icon>
+  </div>
+</mat-toolbar>
+<main>
+  <section class="pokemons-container">
+    <ng-container *ngFor="let pokemon of pokemons">
+      <app-pokemon [id]="pokemon.id"></app-pokemon>
+    </ng-container>
+  </section>
+  <div class="search-container">
+    <button mat-button class="search-more" (click)="onLoadMore()">Ver más...</button>
+  </div>
+</main>
