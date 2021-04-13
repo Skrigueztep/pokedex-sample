@@ -12,6 +12,11 @@ mat-toolbar {
   font-size: 24px;
 }
 
+.menu-content {
+  display: flex;
+  align-items: center;
+}
+
 .search {
   position: relative;
   border: 1px solid #707070;

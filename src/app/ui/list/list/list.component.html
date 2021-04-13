@@ -1,8 +1,11 @@
 <mat-toolbar>
   <span class="title">Pokedex</span>
-  <div class="search">
-    <input title="Search a pokemon" placeholder="Search a pokemon" (input)="onSearchPokemon($event)">
-    <mat-icon>search</mat-icon>
+  <div class="menu-content">
+    <div class="search">
+      <input title="Search a pokemon" placeholder="Search a pokemon" (input)="onSearchPokemon($event)">
+      <mat-icon>search</mat-icon>
+    </div>
+    <button mat-icon-button routerLink="/profile"><mat-icon>menu</mat-icon></button>
   </div>
 </mat-toolbar>
 <main>
