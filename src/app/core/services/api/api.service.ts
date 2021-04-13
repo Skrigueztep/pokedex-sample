@@ -8,6 +8,8 @@ import {Observable} from 'rxjs';
 })
 export class ApiService {
 
+  // TODO: Perf | Implement types for better DE (Developer Experience), not added types to save time
+  // TODO: All types added isn´t a complete model, only have a base required attributes
   private API_URL: string;
 
   constructor(
@@ -25,9 +27,12 @@ export class ApiService {
     }>(this.API_URL.concat('pokemon'), {params});
   }
 
-  // TODO: Perf | Implement types for better DE (Developer Experience), not added types to save time
   public getPokemon(id: number): Observable<any> {
     return this.http.get<any>(this.API_URL.concat(`pokemon/${id}`));
+  }
+
+  public getPokemonEvolution(id: number): Observable<any> {
+    return this.http.get<any>(this.API_URL.concat(`evolution-chain/${id}`));
   }
 
 }
