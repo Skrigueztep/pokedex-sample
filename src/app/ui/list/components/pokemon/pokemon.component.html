@@ -1,1 +1,10 @@
-<p>pokemon works!</p>
+<a matRipple>
+  <div class="types">
+    <ng-container *ngFor="let type of pokemon.types">
+      <span class="type-{{ type.type.name }}">{{ type.type.name | titlecase }}</span>&nbsp;
+    </ng-container>
+  </div>
+  <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+ id +'.png'" alt="{{ '' }}">
+  <b>{{ pokemon.name | titlecase }}</b>
+  <span class="id">#{{ id }}</span>
+</a>
