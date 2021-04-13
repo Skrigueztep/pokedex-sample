@@ -16,8 +16,10 @@ mat-toolbar {
   position: relative;
   border: 1px solid #707070;
   border-radius: 25px;
-  padding: 4px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 4px;
 }
 
 .search input {
