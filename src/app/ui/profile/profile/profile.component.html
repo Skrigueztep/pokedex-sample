@@ -1,1 +1,38 @@
-<p>profile works!</p>
+<main class="profile">
+  <button mat-icon-button class="close-button mat-elevation-z2" routerLink="/">
+    <mat-icon>close</mat-icon>
+  </button>
+  <div class="profile-content">
+    <section class="profile-image">
+      <img src="assets/profile.jfif" alt="@SkrigueztepDev">
+      <div class="profile-image-description">
+        <b>Israel Olvera</b>
+        <span class="tag">Front-End Developer</span>
+        <div class="social">
+          <a href="https://skrigueztepdev.web.app/" target="_blank">
+            <mat-icon>public</mat-icon>
+          </a>
+          <a href="mailto: skrigueztep@gmail.com" target="_blank">
+            <mat-icon>email</mat-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="description">
+      <p>
+        Software Engineer Student, Front-End Developer (MEAN and MERN (comming soon) Applications), Interesting on IT
+        Infraestructure, Cybersecurity.
+      </p>
+    </section>
+    <section class="statistics">
+      <table>
+        <ng-container *ngFor="let statistic of statistics">
+          <tr>
+            <td>{{ statistic.technology }}</td>
+            <td><mat-progress-bar [mode]="'determinate'" [value]="statistic.level"></mat-progress-bar></td>
+          </tr>
+        </ng-container>
+      </table>
+    </section>
+  </div>
+</main>
