@@ -14,7 +14,7 @@
       <app-pokemon [id]="pokemon.id"></app-pokemon>
     </ng-container>
   </section>
-  <div class="search-container">
+  <div class="search-container" *ngIf="pokemons.length > 0">
     <button mat-button class="search-more" (click)="onLoadMore()">Ver más...</button>
   </div>
 </main>
