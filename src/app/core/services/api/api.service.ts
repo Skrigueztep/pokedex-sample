@@ -35,4 +35,8 @@ export class ApiService {
     return this.http.get<any>(this.API_URL.concat(`evolution-chain/${id}`));
   }
 
+  public getGenders(gender: 'male' | 'female'): Observable<any> {
+    return this.http.get<any>(this.API_URL.concat(`gender/${gender}`));
+  }
+
 }
