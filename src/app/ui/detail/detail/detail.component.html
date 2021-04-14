@@ -35,6 +35,17 @@
             <td><b>Abilities</b></td>
             <td>{{ abilities.toString() }}</td>
           </tr>
+          <tr><b>Breeding</b></tr>
+          <tr>
+            <td><b>Gender</b></td>
+            <td>
+              <ng-container *ngFor="let gender of genderRates">
+                <mat-icon *ngIf="gender.gender === 'male'">male</mat-icon>
+                <mat-icon *ngIf="gender.gender === 'female'">female</mat-icon>
+                {{ gender.gender | titlecase }} - {{ (gender.rate !== 0) ? gender.rate / 8 : 0 }}%
+              </ng-container>
+            </td>
+          </tr>
           </tbody>
         </table>
       </mat-tab>
